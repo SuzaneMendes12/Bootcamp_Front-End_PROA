@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Grid</title>
+
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/9255/9255884.png" type="image/x-icon">
+</head>
+
+<!-- grid é composto por linhas e colunas simultaneamente no flexbox é so linha ou coluna. ele é o layout ent foca primeiro nas estruturas -->
+ <!-- FR criar colunas que se adaptam perfeitamente à largura do
+navegador. -->
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+display: grid;
+/* numero de colunas e suas larguras */
+grid-template-columns: 150px 1fr 1fr 1fr 1fr 1fr 150px;
+grid-template-rows: 80px 100vh 120px;
+gap: 0 8px;
+}
+
+header{
+    background-color: black;
+    color: antiquewhite;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-column: 1 / 8;
+    grid-row: 1 / 2;
+}
+
+ul{
+    display: flex;
+    gap: 18px;
+}
+
+main{
+    background-color: gray;
+    grid-column: 1 / 6;
+    grid-row: 2 / 3;
+}
+
+aside{
+    background-color: azure;
+    grid-column: 6 / 8;
+    grid-row: 2 / 3;
+}
+
+footer{
+    background-color: brown;
+    color: aliceblue;
+    grid-column: 1 / 8;
+    grid-row: 3 / 4;
+}
+
+</style>
+
+
+<body>
+
+    <header>
+        <img src="#" alt="Logo do site">
+        <nav>
+            <ul>
+                <li>home</li>
+                <li>Projetos</li>
+                <li>Sobre</li>
+                <li>Contato</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Meu site</h1>
+
+        <section>
+            <h2>Subtitulo</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, hic alias dicta, eligendi sapiente nulla, reprehenderit cum voluptatem voluptates et vitae ipsum quasi cumque expedita exercitationem ipsa veritatis consequatur. Exercitationem distinctio voluptate aliquid est perspiciatis ducimus, dolores id minima, nihil ut facilis sed veritatis voluptatibus modi officiis, vitae nisi incidunt.</p>
+        </section>
+    </main>
+
+    <aside>
+        <h2>Conteudo</h2>
+        <p>textos aq</p>
+    </aside>
+
+    <footer>
+        <small> @Copyright - todos os direitos reservados - Eu mesmo </small>
+    </footer>
+    
+</body>
+</html>

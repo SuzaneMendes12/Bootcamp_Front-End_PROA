@@ -1,0 +1,12 @@
+:root {
+    --cor-primaria: red;
+    --cor-secundaria:#00ff00;
+    --cor-terciaria:blue;
+    
+    --titulo:36px;
+    --subtitulo:24px;
+    --rodape:12px;
+
+    --transicao: all ease 260ms;
+
+}

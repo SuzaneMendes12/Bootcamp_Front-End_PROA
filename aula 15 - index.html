@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML - tabelas</title>
+    <link
+      rel="shortcut icon"
+      href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ac7d183b-035e-4133-8302-bcc92a267aa7/dg3gpx7-5e93dab7-163f-47ad-b4a8-d0a04f9b96e8.png/v1/fill/w_491,h_509/rigby_regular_show_png_by_ppgfanantic2000_dg3gpx7-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTA5IiwicGF0aCI6Ii9mL2FjN2QxODNiLTAzNWUtNDEzMy04MzAyLWJjYzkyYTI2N2FhNy9kZzNncHg3LTVlOTNkYWI3LTE2M2YtNDdhZC1iNGE4LWQwYTA0ZjliOTZlOC5wbmciLCJ3aWR0aCI6Ijw9NDkxIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.x2wYDpbZ_SX16D57xYMN8UiveMu2DdIqIPshLXw0Eag"
+      type="image/x-icon"/>
+  </head>
+
+  <body>
+
+    <section>
+       
+     <!-- TAgs de acessibilidade - O atributo scope="col" ou scope="row" diz aos Leitores de Ecrã se aquele cabeçalho
+     (<th>) manda numa coluna inteira ou numa linha inteira. Isto ajuda pessoas com deficiência visual a não se perderem na grelha do Benson!
+     scope="col" ou scope="row" → define a relação entre cabeçalhos e dados (acessibilidade). -->
+
+      <table>
+        <!-- titulo tabela -->
+        <caption>
+          Lista de produtos para vender
+        </caption>
+
+        <!-- Cabeçalho -->
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Observação</th>
+            <th scope="col">Nota</th>
+            <th scope="col">Preço</th>
+          </tr>
+        </thead>
+
+        <!-- Corpo -->
+        <tbody>
+          <tr>
+            <td scope="row">caneta</td>
+            <td>Kit com 5</td>
+            <td>*****</td>
+            <td>R$ 1,50</td>
+          </tr>
+
+          <tr>
+            <td scope="row">Miojo turma da monica</td>
+            <td>Bem temperado e original</td>
+            <td>**</td>
+            <td>R$ 8</td>
+          </tr>
+
+          <tr>
+            <!-- colspan="n" → célula ocupa várias colunas. 
+             rowspan="n" → célula ocupa várias linhas. -->
+            <td rowspan="2" scope="row">Relogio do Ben 10</td>
+            <td>O novo</td>
+            <td>**</td>
+            <td>R$ 10,00</td>
+          </tr>
+          
+          <tr>
+            <td>O velho</td>
+            <td>****</td>
+            <td>R$ 12,00</td>
+          </tr>
+        </tbody>
+
+        <!-- Rodapé -->
+        <tfoot>
+          <tr>
+            <th scope="row">Total</th>
+            <td>R$ 31,50</td>
+          </tr>
+        </tfoot>
+
+      </table>
+
+    </section>
+
+  </body>
+</html>

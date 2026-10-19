@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS - Posicionamento e Display</title>
+
+		<link rel="shortcut icon" href="https://freepngimg.com/thumb/tv_shows/33364-9-house-targaryen-transparent.png" type="image/x-icon" />
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				height: 200vh;
+				font-family: "montserrat";
+				position: relative;
+			}
+
+			header {
+				/* menu fixo e nenhum item sobrepor ele */
+				position: fixed;
+				top: 0;
+                z-index: 2;
+
+				width: 100%;
+				height: 80px;
+				display: flex;
+				background-color: rgb(68, 68, 68);
+				color: rgb(240, 240, 240);
+				justify-content: center;
+				align-items: center;
+			}
+
+			main {
+				margin-top: 110px;
+        background-color: beige;
+				height: 800px;
+			}
+
+			ul {
+				list-style: none;
+			}
+
+			.menu_principal {
+				display: flex;
+				gap: 32px;
+				justify-content: center;
+				position: relative;
+			}
+
+			.menu_secundario {
+				position: absolute;
+				display: none;
+				transition: all ease 350ms;
+				background-color: rgb(68, 68, 68);
+				padding: 16px;
+				top: 24px;
+				left: 32px;
+				border-radius: 20px;
+				border: 2px solid black;
+			}
+
+			.projeto:hover .menu_secundario {
+				display: block;
+			}
+
+			h1 {
+				background-color: red;
+			}
+
+			section {
+				margin: 24px;
+			}
+
+			.container_relativo {
+				background-color: aqua;
+			}
+
+			.relativo {
+				position: relative;
+				bottom: 35px;
+				left: 50px;
+			}
+
+			.container_absoluto {
+				position: relative;
+        z-index: 1;
+			}
+
+			.absoluto {
+				position: absolute;
+				top: 80px;
+				right: 0;
+			}
+
+			.subir {
+				background-color: yellow;
+				border: none;
+				padding: 8px;
+				font-size: 24px;
+				border-radius: 50%;
+			}
+
+			.subir_link {
+				position: sticky;
+				left: 90vw;
+				top: 110px;
+			}
+
+      .quadrado1, .quadrado2, .quadrado3 {
+        width: 250px;
+        height: 250px;
+        position: absolute;
+      }
+
+      .quadrado1 {
+        background-color: blue;
+        top: 50px;
+        z-index: 2;
+      }
+
+      .quadrado2 {
+        background-color: red;
+        top: 80px;
+        left: 40px;
+        z-index: 3;
+      }
+
+      .quadrado3 {
+        background-color: green;
+        top: 70px;
+        left: 80px;
+        z-index: 4;
+      }
+
+      strong {
+        background-color: blueviolet;
+        display: inline-block;
+        padding: 16px;
+        margin: 8px;
+      }
+
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul class="menu_principal">
+					<li>Home</li>
+					<li class="projeto">
+						Projetos
+						<ul class="menu_secundario">
+							<li>Portfólio</li>
+							<li>App de Academia</li>
+							<li>Gestor Financeiro</li>
+						</ul>
+					</li>
+					<li>Contatos</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<!-- Elementos com display: block padrão -->
+			<section id="inicio">
+				<h1>Texto</h1>
+				<p>Texto</p>
+				<div>Texto</div>
+			</section>
+
+			<hr />
+
+			<!-- Elementos com display: inline padrão -->
+			<section>
+				<span> Texto </span>
+				<a> Texto </a>
+				<strong> Texto </strong>
+        <span> Texto </span>
+        <p>Texto Texto Texto Texto Texto </p>
+			</section>
+
+			<section>
+				<p class="container_relativo">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita commodi
+					<span class="relativo"> quod sunt inventore corporis nobis amet, doloremque hic nesciunt, vero fugiat porro repudiandae unde? </span> Beatae
+					porro quos maiores ea deleniti magnam, enim labore quae dolores amet alias provident pariatur. Maxime quidem, vitae enim magni est
+				</p>
+			</section>
+
+			<section>
+				<p class="container_absoluto">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita commodi
+					<span class="absoluto"> quod sunt inventore corporis nobis amet, doloremque hic nesciunt, vero fugiat porro repudiandae unde? </span> Beatae
+					porro quos maiores ea deleniti magnam, enim labore quae dolores amet alias provident pariatur. Maxime quidem, vitae enim magni est
+				</p>
+			</section>
+
+      <section class="container_absoluto">
+
+        <div class="quadrado1"></div>
+
+        <div class="quadrado2"></div>
+
+        <div class="quadrado3"></div>
+
+      </section>
+
+			<a href="#inicio" class="subir_link"> <button class="subir">🔝</button></a>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML formularios</title>
+    <link
+      rel="shortcut icon"
+      href="https://www.freepnglogos.com/uploads/rick-and-morty-png/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png"
+      type="image/png"/>
+
+      <style>
+        div, fieldset {
+            margin: 8px 0;
+        }
+      </style>
+  </head>
+  <body>
+
+    <!-- todo item de envio de dados precisa do atributo name para o BD identificar -->
+    <form action="#" method="get" target="_blank">
+      <div>
+        <label for="nome"> Nome </label>
+        <input id="nome" type="text" />
+      </div>
+
+      <div>
+        <label for="comentario"> Comentario </label>
+        <textarea name="comentario" id="comentario" rows="3" cols="10" maxlength="50" placeholder="Digite aqui" ></textarea>
+      </div>
+
+      <div>
+        <label for="planeta"> planeta </label>
+        <select name="planeta" id="planeta" required>
+        <option value="" disabled selected> Selecione um planeta </option>
+          <optgroup label="Planeta 1">
+            <option value="">Terra</option>
+            <option value="">MArte</option>
+            <option value="">VEnus</option>
+          </optgroup>
+
+          <optgroup label="Planeta 2">
+            <option value="">Saturno</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <!-- grupo de campos -->
+      <fieldset>
+        <!-- titulo do grupo -->
+        <legend>Seu endereço aqui</legend>
+
+        <div>
+          <label for="rua"> rua </label>
+          <input type="text" name="rua" id="rua" />
+        </div>
+
+        <div>
+          <label for="bairro">bairro</label>
+          <input type="text" name="bairro" list="lista_de_bairros" id="bairro"/>
+          <!-- Lista de sugestões -->
+          <datalist id="lista_de_bairros">
+            <option>Bairro novo</option>
+            <option>BAirro velho</option>
+            <option>Bairro mais ou menos</option>
+            <option>Bairro legal</option>
+            <option>Bairro Ilegal</option>
+          </datalist>
+        </div>
+
+        <div>
+            <label for="cep"> CEP </label>
+            <input type="text" id="cep" name="cep">
+        </div>
+      </fieldset>
+      
+     <div>
+        <label for="progresso"> Carregamento do formulario </label>
+      <progress id="progresso" value="55" max="100"></progress>
+    </div>
+
+    <div>
+        <meter id="meter" value="0.7" min="0" max="1"></meter>
+        <label for="meter"> 75% </label>
+    </div>
+
+    <fieldset>
+        <legend>inputs</legend>
+        
+        <div>
+            <label for="texto"> Texto </label>
+            <input type="text" name="texto" id="texto" placeholder="EX:qlqr coisa">
+        </div>
+
+        <div>
+            <label for="senha">senha</label>
+            <input type="password" name="senha" id="senha" placeholder="EX:12345678">
+        </div>
+
+        <div>
+            <label for="email">email</label>
+            <input type="email" name="email" id="email" placeholder="exemplo@gmail.com">
+        </div>
+
+        <div>
+            <label for="url"> URL</label>
+            <input type="url" name="url" id="url" placeholder="http://link">
+        </div>
+
+        <div>
+            <label for="telefone"> telefone </label>
+            <input type="tel" name="telefone" id="telefone" placeholder="119xxxxxxx">
+        </div>
+
+        <div>
+            <label for="numero"> numero</label>
+            <input type="number" name="numero" id="numero" min="0" max="50">
+        </div>
+
+        <div>
+            <label for="range"> range</label>
+            <input type="range" name="range" id="range">
+        </div>
+
+        <div>
+            <label for="data"> data</label>
+            <input type="date" name="data" id="data">
+        </div>
+
+        <fieldset>
+            <p> checkbox</p>
+
+            <input type="checkbox" name="checkbox" id="opcao1" value="opcao1">           
+            <label for="opcao1">Opção 1</label>
+
+            <input type="checkbox" name="checkbox" id="opcao2" value="opcao2">
+            <label for="opcao2"> opção 2</label>
+
+            <input type="checkbox" name="checkbox" id="opcao3"  value="opcao3">
+            <label for="opcao3"> opção 3</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>radio</legend>
+
+            <input type="radio" name="radio" id="opcao1radio" value="opcao1radio">           
+            <label for="opcao1radio">Opção 1</label>
+
+            <input type="radio" name="radio" id="opcao2radio" value="opcao2radio">           
+            <label for="opcao2radio">Opção 2</label>
+
+            <input type="radio" name="radio" id="opcao3radio" value="opcao3radio">           
+            <label for="opcao3radio">Opção 3</label>
+        </fieldset>
+        
+        <div>
+            <label for="arquivo"> Arquivo </label>
+            <input type="file" id="arquivo" name="arquivo">
+        </div>
+
+        <div>
+            <label for="color"> cor </label>
+            <input type="color" name="cor" id="cor">
+        </div>
+
+        
+
+    </fieldset>
+
+      <button>Enviar</button>
+      <button type="reset">Reset</button>
+      
+    </form>
+  </body>
+</html>

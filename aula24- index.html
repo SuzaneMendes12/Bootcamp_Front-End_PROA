@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS - FLEXBOX </title>
+    <link rel="shortcut icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/b179b54a-c6c2-4d81-8417-1bb908ea5ec1/ddi0epi-bb9a4fe7-8c0f-4b6a-8af7-71d32b58070b.png" type="image/x-icon">
+
+    <!-- FLEXBOX SO TRANSFORMA EM DISPLAY FLEX ELEMENTOS FILHOS DIRETOS DOS PAIS - TIPO A UL QUE É PAI DA LI O DISPLAY VAI PEGAR NA LI-->
+
+     <!-- COR E FONTES ENTRE OUTRAS PROPRIEDADES SAO HERDADAS ENTRE PAIS FILHOS E NETOS -->
+
+     <!-- Propriedades so do elemento pai (quase todas): FLEX DIRECTION colunas ou inverter ordens- JUSTIFY CONTENT alinha no eixo principal horizontal ent se eu por em coluna vai em coluna se por em linha vai em linha- ALIGN ITENS alinha na vertical eixo tranversal- FLEX WRAP quebra de linha dos itens- GAP espaçamento nos itens como na ul  -->
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        header{
+            background-color: black;
+            color: aliceblue;
+            height: 70px;
+            display: flex;
+            justify-content: space-around;
+            align-items: end;
+            /* afasta do fim */
+            padding-bottom: 16px;
+        }
+
+        ul{
+            list-style: none;
+            display: flex;
+            gap: 16px;
+        }
+
+        button{
+            background-color: blue;
+            color: aliceblue;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        main{
+            padding: 24px 180px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 16px;
+        }
+        
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* joga item pra baixo */
+            flex-wrap: wrap;
+            gap: 24px;
+            column-gap: 50px;
+        }
+
+        article{
+            background-color: gray;
+            width: 250px;
+            height: 250px;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .descricao{
+        text-align: start;
+        display: flex;
+        gap: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <img src="" alt="Logo do site">
+        <nav>
+            <ul>
+                <li> Home </li>
+                <li> Projetos </li>
+                <li> SObre </li>
+                <li> COntato </li>
+            </ul>
+        </nav>
+
+        <button>CTA</button>
+        
+    </header>
+
+    <main>
+        <h1>MINHA PAgina</h1>
+
+        <section>
+            <article>
+                <h2>Foto do item</h2>
+                <img src="#" alt="item">
+                <!--usa divs qnd preciso estilizar itens tipo um do lado do outro  -->
+                <div class="descricao">
+                <p>descrição</p>
+                </div>
+
+                <div class="preco">
+                    <p>preço</p>
+                    <p>R$100,00</p>
+                </div>
+
+            </article>
+
+            <article>
+                <h2>Foto do item</h2>
+                <img src="#" alt="item">
+                <p>descrição</p>
+            </article>
+
+            <article>
+                <h2>Foto do item</h2>
+                <img src="#" alt="item">
+                <p>descrição</p>
+            </article>
+
+            <article>
+                <h2>Foto do item</h2>
+                <img src="#" alt="item">
+                <p>descrição</p>
+            </article>
+
+            <article>
+                <h2>Foto do item</h2>
+                <img src="#" alt="item">
+                <p>descrição</p>
+            </article>
+
+            <article>
+                <h2>Foto do item</h2>
+                <img src="#" alt="item">
+                <p>descrição</p>
+            </article>
+
+            <article>
+                <h2>Foto do item</h2>
+                <img src="#" alt="item">
+                <p>descrição</p>
+            </article>
+            
+            <article>
+                <h2>Foto do item</h2>
+                <img src="#" alt="item">
+                <p>descrição</p>
+            </article>
+
+            <article>
+                <h2>Foto do item</h2>
+                <img src="#" alt="item">
+                <p>descrição</p>
+            </article>
+
+        </section>
+    </main>
+    <footer></footer>
+    
+</body>
+</html>

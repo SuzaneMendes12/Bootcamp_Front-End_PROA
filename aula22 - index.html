@@ -1,0 +1,159 @@
+
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS - Box Model</title>
+		<link
+			rel="shortcut icon"
+			href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7a5b5c67-dee6-456b-863b-75930852c715/dif584z-f990808e-fc38-44d8-88b4-3bc5c30f9bfc.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi83YTViNWM2Ny1kZWU2LTQ1NmItODYzYi03NTkzMDg1MmM3MTUvZGlmNTg0ei1mOTkwODA4ZS1mYzM4LTQ0ZDgtODhiNC0zYmM1YzMwZjliZmMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.-a86mW2YTfUqGV6-KjXEEogB4Kq-AY18a73BG0OvvQc"
+			type="image/x-icon" />
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			section {
+				background-color: blue;
+
+				/* %vw = viewport width */
+				width: 800px;
+				min-width: 200px;
+				max-width: 800px;
+
+				/* %vh = viewport height */
+				height: 50vh;
+
+				/* padding: Todos */
+				/* padding: Y X */
+				/* padding: Cima Meio Baixo */
+				/* padding: Cima Direita Baixo Esquerda */
+				padding: 10px 20px 30px 50px;
+
+				border: 10px ridge #aa0080;
+				border-radius: 18px 50px 100px;
+
+				margin: 50px auto;
+			}
+
+			p {
+				background-color: blueviolet;
+				width: 100%;
+				height: 100%;
+
+				border-radius: 18px 50px 100px;
+			}
+
+			div {
+				width: 25%;
+        height: 100%;
+        padding: 16px;
+				background-color: rgb(28, 151, 189);
+
+        scrollbar-width: thin;
+        scrollbar-color: #aa0080 rgb(28, 151, 189);
+			}
+
+      .hidden {
+        overflow: hidden;
+      }
+
+      .scroll {
+        overflow: scroll;
+      }
+
+      .auto {
+        overflow: auto;
+      }
+
+      img {
+        width: 150px;
+        margin-right: 8px;
+      }
+
+      .blur {
+        filter: blur(5px);
+        transition: all ease 350ms;
+      }
+
+      .blur:hover {
+        filter: blur(0);
+      }
+
+      .grayscale {
+        filter: grayscale(100%);
+        transition: all ease 350ms;
+      }
+
+      .grayscale:hover {
+        filter: grayscale(0);
+      }
+
+      .saturate {
+        filter: saturate(200%);
+        transition: all ease 350ms;
+      }
+
+      .saturate:hover {
+        filter: saturate(100%);
+      }
+
+      .drop-shadow {
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.897));
+        /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.521); */
+        transition: all ease 350ms;
+      }
+
+		</style>
+	</head>
+	<body>
+		<section>
+			<p style="color: white; font-size: 26px; font-weight: bold; text-align: center; padding-top: 90px;"> Pausa Rápida - Retorno 21:00</p>
+		</section>
+
+    <section style="height: fit-content; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+
+        <img class="blur" src="https://picsum.photos/200/300" />
+        <img class="grayscale" src="https://picsum.photos/200/300" />
+        <img class="saturate" src="https://picsum.photos/200/300" />
+        <img class="drop-shadow" src="https://picsum.photos/200/300" />
+        <img class="drop-shadow" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7a5b5c67-dee6-456b-863b-75930852c715/dif584z-f990808e-fc38-44d8-88b4-3bc5c30f9bfc.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi83YTViNWM2Ny1kZWU2LTQ1NmItODYzYi03NTkzMDg1MmM3MTUvZGlmNTg0ei1mOTkwODA4ZS1mYzM4LTQ0ZDgtODhiNC0zYmM1YzMwZjliZmMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.-a86mW2YTfUqGV6-KjXEEogB4Kq-AY18a73BG0OvvQc" />
+
+    </section>
+
+		<section style="display: flex; gap: 20px; justify-content: space-between">
+			<div>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dignissimos doloremque tempore sint nostrum numquam debitis cupiditate quasi
+				rem molestias, illo maxime temporibus error excepturi dolorum quia corrupti earum fugit? Lorem ipsum dolor sit amet consectetur adipisicing
+				elit. Rerum dignissimos doloremque tempore sint nostrum numquam debitis cupiditate quasi rem molestias, illo maxime temporibus error excepturi
+				dolorum quia corrupti earum fugit?
+			</div>
+
+			<div class="hidden">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dignissimos doloremque tempore sint nostrum numquam debitis cupiditate quasi
+				rem molestias, illo maxime temporibus error excepturi dolorum quia corrupti earum fugit? Lorem ipsum dolor sit amet consectetur adipisicing
+				elit. Rerum dignissimos doloremque tempore sint nostrum numquam debitis cupiditate quasi rem molestias, illo maxime temporibus error excepturi
+				dolorum quia corrupti earum fugit?
+			</div>
+
+			<div class="scroll">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dignissimos doloremque tempore sint nostrum numquam debitis cupiditate quasi
+				rem molestias, illo maxime temporibus error excepturi dolorum quia corrupti earum fugit? Lorem ipsum dolor sit amet consectetur adipisicing
+				elit. Rerum dignissimos doloremque tempore sint nostrum numquam debitis cupiditate quasi rem molestias, illo maxime temporibus error excepturi
+				dolorum quia corrupti earum fugit?
+			</div>
+
+      <div class="auto">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dignissimos doloremque tempore sint nostrum numquam debitis cupiditate quasi
+				rem molestias, illo maxime temporibus error excepturi dolorum quia corrupti earum fugit? Lorem ipsum dolor sit amet consectetur adipisicing
+				elit. Rerum dignissimos doloremque tempore sint nostrum numquam debitis cupiditate quasi rem molestias, illo maxime temporibus error excepturi
+				dolorum quia corrupti earum fugit?
+			</div>
+
+		</section>
+	</body>
+</html>

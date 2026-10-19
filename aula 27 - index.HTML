@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS - Transição e Animação</title>
+		<link
+			rel="shortcut icon"
+			href="https://cloudfront-us-east-1.images.arcpublishing.com/estadao/ZS5C5KTJ4BOIXBDDFF37DJGDRI.jpg"
+			type="image/x-icon" />
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				background-color: rgb(59, 59, 59);
+				height: 100vh;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			/* Container da órbita: a lua fica no centro */
+			.orbita {
+				position: relative;
+				width: 320px;
+				height: 320px;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.lua {
+				font-size: 60px;
+				line-height: 1;
+				animation: pulsar 2s ease infinite alternate-reverse forwards;
+			}
+
+			.aviao {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				font-size: 50px;
+				line-height: 1;
+
+				animation: orbitar 6s linear infinite;
+			}
+
+			@keyframes pulsar {
+				0% {
+					opacity: 1;
+					transform: scale(1);
+				}
+
+				50% {
+					opacity: 0.5;
+					transform: scale(1.5);
+				}
+
+				100% {
+					opacity: 1;
+					transform: scale(2);
+				}
+			}
+
+			/*
+			  1) translate(-50%, -50%) -> centraliza o avião no centro da lua
+			  2) rotate(θ)             -> gira o "braço" da órbita
+			  3) translateX(150px)     -> afasta o avião do centro (raio da órbita)
+			  4) rotate(135deg)        -> o emoji ✈️ aponta para nordeste (-45°);
+			                              somando com o giro, ele fica de frente
+			                              para a direção do movimento (sentido horário)
+			*/
+			@keyframes orbitar {
+				from {
+					transform: translate(-50%, -50%) rotate(0deg) translateX(150px)
+						rotate(135deg);
+				}
+
+				to {
+					transform: translate(-50%, -50%) rotate(360deg) translateX(150px)
+						rotate(135deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="orbita">
+			<p class="lua">🌘</p>
+			<p class="aviao">✈️</p>
+		</div>
+	</body>
+</html>
