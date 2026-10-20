@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS - Introdução</title>
+  <link rel="shortcut icon" href="https://shogun2-encyclopedia.com/layout_images/shogun2-logo.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"> 
+
+  <link rel="stylesheet" href="./style.css">
+
+  <style>
+
+    li {
+      background-color:chartreuse;
+      transition: all ease 500ms;
+
+      padding: 16px;
+      border: 5px solid black;
+      margin: 16px;
+    }
+
+    li::before {
+      content: " ☻ ";
+    }
+
+    .classe {
+      background-color: blue;
+    } 
+
+    #id1 {
+      background-color:cornflowerblue;
+    }
+
+    .descendente p {
+      background-color: blueviolet;
+    }
+
+    section > .filho {
+      background-color: rgb(78, 207, 147);
+    }
+
+    h1 + .irmao {
+      background-color: darkgreen;
+    }
+
+    li:hover{
+      background-color: black;
+      color: white;
+    }
+
+    input {
+      transition: all ease 500ms;
+    }
+
+    input:active {
+      background-color: rgb(8, 8, 8);
+      color: white;
+    }
+
+    input:focus {
+      background-color: rgb(121, 120, 120);
+      color: white;
+    }
+
+
+  </style>
+
+</head>
+<body>
+  
+  <h1 class="titulo"> Título </h1>
+
+  <p class="irmao"> Descrição da lista </p>
+
+  <p> Outra descrição da lista </p>
+
+  <ul>
+    <li> Item 1 </li>
+    <li class="classe"> Item 2 </li>
+    <li class="classe"> Item 3 </li>
+    <li class="classe" id="id1"> Item 4 </li>
+    <li class="classe" id="id2" style="background-color: darkred;"> Item 5 </li>
+  </ul>
+
+  <section>
+    <h2> Outros Itens </h2>
+    <p class="filho"> Textinho explicativo </p>
+
+    <article class="descendente">
+      <h3> Item 1 </h3>
+      <p class="estilo"> Descrição </p>
+    </article>
+
+    <article>
+      <h3> Item 2 </h3>
+      <p> Descrição </p>
+    </article>
+
+    <article>
+      <h3> Item 3 </h3>
+      <p> Descrição </p>
+    </article>
+
+  </section>
+
+  <p> Texto fora da seção </p>
+
+  <label> Input </label>
+  <input type="text">
+
+</body>
+</html>
